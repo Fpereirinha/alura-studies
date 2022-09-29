@@ -1,4 +1,5 @@
 import React from "react";
+import Item from "./item/item";
 import style from "./Lista.module.sass";
 function List() {
 	const tarefas = [
@@ -20,10 +21,7 @@ function List() {
 			<h2>Estudos do Dia</h2>
 			<ul>
 				{tarefas.map((tarefa, key) => (
-					<li key={key} className={style.item}>
-						<h3>{tarefa.tarefa}</h3>
-						<span>{tarefa.tempo}</span>
-					</li>
+					<Item key={key} {...tarefa} />
 				))}
 			</ul>
 		</aside>
