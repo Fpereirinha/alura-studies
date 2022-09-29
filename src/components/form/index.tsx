@@ -16,7 +16,7 @@ class Form extends React.Component {
 					/>
 				</div>
 				<div className={style.inputContainer}>
-					<label htmlFor="time">Qual tempo durará ?</label>
+					<label htmlFor="time">Tempo</label>
 					<input
 						type="time"
 						id="time"
