@@ -6,9 +6,10 @@ class Button extends React.Component<{
 }> {
 	render() {
 		const { type = "button" } = this.props;
+		const { children = "Botão" } = this.props;
 		return (
 			<button type={type} className={style.botao}>
-				{this.props.children ? this.props.children : "Botão"}
+				{children}
 			</button>
 		);
 	}

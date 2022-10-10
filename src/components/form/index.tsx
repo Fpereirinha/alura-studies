@@ -1,11 +1,17 @@
 import React, { FormEvent } from "react";
 import Button from "../button";
 import style from "./Form.module.sass";
-class Form extends React.Component {
+import { ITarefa } from "../../types/tarefa";
+class Form extends React.Component<{
+	setTarefas: React.Dispatch<React.SetStateAction<ITarefa[]>>;
+}> {
 	state = { tarefa: "", tempo: "00:00" };
 	saveTarefa(evento: FormEvent<HTMLFormElement>) {
 		evento.preventDefault();
-		console.log(this.state);
+		this.props.setTarefas((tarefasAntigas) => [
+			...tarefasAntigas,
+			{ ...this.state },
+		]);
 	}
 	render() {
 		return (
