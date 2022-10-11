@@ -1,13 +1,16 @@
 import { ITarefa } from "../../../types/tarefa";
 import style from "../Lista.module.sass";
-
+interface Props extends ITarefa {
+	selectTask: (tarefaselecionada: ITarefa) => void;
+}
 export default function Item({
 	tarefa,
 	tempo,
 	selecionado,
 	completado,
 	id,
-}: ITarefa) {
+	selectTask,
+}: Props) {
 	console.log("item atual: ", { selecionado, completado, id });
 	return (
 		<li className={style.item}>

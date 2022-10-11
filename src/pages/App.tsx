@@ -8,10 +8,14 @@ import style from "./App.module.sass";
 
 function App() {
 	const [tarefas, setTarefas] = useState<ITarefa[]>([]);
+	const [selecionado, setSelecionado] = useState<ITarefa>();
+	function selectTask(tarefaselecionada: ITarefa) {
+		setSelecionado(tarefaselecionada);
+	}
 	return (
 		<div className={style.AppStyle}>
 			<Form setTarefas={setTarefas} />
-			<List tarefas={tarefas} />
+			<List tarefas={tarefas} selectTask={selectTask} />
 			<Cronometro />
 		</div>
 	);
