@@ -13,7 +13,7 @@ export default function Item({
 }: Props) {
 	console.log("item atual: ", { selecionado, completado, id });
 	return (
-		<li className={style.item}>
+		<li className={style.item} key={id}>
 			<h3>{tarefa}</h3>
 			<span>{tempo}</span>
 		</li>

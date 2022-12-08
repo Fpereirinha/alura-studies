@@ -12,7 +12,7 @@ function List({ tarefas, selectTask }: Props) {
 			<h2>Estudos do Dia</h2>
 			<ul>
 				{tarefas.map((tarefa) => (
-					<Item selectTask={selectTask} key={tarefa.id} {...tarefa} />
+					<Item selectTask={selectTask} {...tarefa} />
 				))}
 			</ul>
 		</aside>
