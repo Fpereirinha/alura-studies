@@ -7,15 +7,7 @@ import { ITarefa } from "../types/tarefa";
 import style from "./App.module.sass";
 
 function App() {
-	const [tarefas, setTarefas] = useState<ITarefa[]>([
-		{
-			tarefa: "sss",
-			tempo: "sss",
-			selecionado: true,
-			completado: true,
-			id: "sss",
-		},
-	]);
+	const [tarefas, setTarefas] = useState<ITarefa[]>([]);
 	const [selecionado, setSelecionado] = useState<ITarefa>();
 	function selectTask(tarefaselecionada: ITarefa) {
 		setSelecionado(tarefaselecionada);
