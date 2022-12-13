@@ -11,7 +11,6 @@ export default function Item({
 	id,
 	selectTask,
 }: Props) {
-	console.log("item atual: ", { selecionado, completado, id });
 	return (
 		<li
 			className={`${style.item} ${selecionado ? style.itemSelecionado : ""}`}
